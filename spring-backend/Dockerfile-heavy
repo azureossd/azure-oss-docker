@@ -1,0 +1,8 @@
+FROM maven:3.8.4-openjdk-17
+COPY ./ ./
+RUN mvn package
+RUN mkdir /app
+RUN mv ./target/*.jar /app/spring-backend.jar
+WORKDIR /app
+CMD ["java","-jar","./spring-backend.jar"]
+EXPOSE 8080

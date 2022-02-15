@@ -1,0 +1,69 @@
+---
+version: '3.8'
+services:
+  oss-frontend:
+    build: nuxt-frontend/.
+    ports:
+      - 3000:3000
+    environment:
+      BACKEND_URL: http://localhost:8080
+    healthcheck:
+      test: ["CMD", "curl" ,"--fail", "http://localhost:3000/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  oss-backend:
+    build: spring-backend/.
+    # depends_on:
+    #   oss-database:
+    #     condition: service_healthy
+    ports:
+      - 8080:8080
+    environment:
+      - MYSQL_HOST=oss-database
+      - SPRING_DATASOURCE_USERNAME=oss
+      - SPRING_DATASOURCE_PASSWORD=very_safe_password
+      - SPRING_PROFILES_ACTIVE=docker
+    healthcheck:
+      test: ["CMD", "curl" ,"--fail", "http://localhost:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  oss-database:
+    image: mysql:8.0.28
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=very_safe_root_password
+      - MYSQL_DATABASE=oss-backend
+      - MYSQL_USER=oss
+      - MYSQL_PASSWORD=very_safe_password
+    cap_add:
+      - SYS_NICE
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - db_data:/var/lib/mysql
+    #   - ./db_data:/var/lib/mysql
+
+  adminer:
+    image: adminer:latest
+    ports:
+      - 9001:8080
+    depends_on:
+      - pg-database
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  db_data:
