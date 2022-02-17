@@ -56,7 +56,7 @@ services:
     ports:
       - 9001:8080
     depends_on:
-      - pg-database
+      - oss-database
 
   portainer:
     image: portainer/portainer-ce:latest
