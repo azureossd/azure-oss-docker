@@ -31,7 +31,8 @@ RUN addgroup -S $USERNAME \
     --ingroup "$USERNAME" \
     --no-create-home \
     --uid "$UID" \
-    "$USERNAME"
+    "$USERNAME" \
+    && chown -R $USERNAME:$USERNAME /app
 USER $USERNAME
 EXPOSE 3000
 HEALTHCHECK CMD curl --fail http://localhost:3000/ || exit 1

@@ -19,7 +19,8 @@ RUN addgroup -S $USERNAME \
     --ingroup "$USERNAME" \
     --no-create-home \
     --uid "$UID" \
-    "$USERNAME"
+    "$USERNAME" \
+    && chown -R $USERNAME:$USERNAME /app
 USER $USERNAME
 CMD ["java","-jar","./spring-backend.jar"]
 HEALTHCHECK CMD curl --fail http://localhost:8080/actuator/health || exit 1
