@@ -6,7 +6,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      BACKEND_URL: http://localhost:8080
+      BACKEND_URL: ${BACKEND_URL}
     healthcheck:
       test: ["CMD", "curl" ,"--fail", "http://localhost:3000/"]
       interval: 10s
@@ -21,10 +21,10 @@ services:
     ports:
       - 8080:8080
     environment:
-      - MYSQL_HOST=oss-database
-      - SPRING_DATASOURCE_USERNAME=oss
-      - SPRING_DATASOURCE_PASSWORD=very_safe_password
-      - SPRING_PROFILES_ACTIVE=docker
+      MYSQL_HOST: ${MYSQL_HOST}
+      SPRING_DATASOURCE_USERNAME: ${MYSQL_USER}
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
     healthcheck:
       test: ["CMD", "curl" ,"--fail", "http://localhost:8080/actuator/health"]
       interval: 10s
@@ -36,10 +36,10 @@ services:
     ports:
       - 3306:3306
     environment:
-      - MYSQL_ROOT_PASSWORD=very_safe_root_password
-      - MYSQL_DATABASE=oss-backend
-      - MYSQL_USER=oss
-      - MYSQL_PASSWORD=very_safe_password
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     cap_add:
       - SYS_NICE
     healthcheck:
