@@ -27,7 +27,7 @@
     "babel-jest": "^27.4.4",
     "eslint-config-prettier": "^8.3.0",
     "jest": "^27.4.4",
-    "prettier": "^2.5.1",
+    "prettier": "^3.8.1",
     "vue-jest": "^3.0.4"
   }
 }
