@@ -1,4 +1,4 @@
-FROM node:17-alpine3.15
+FROM node:19-alpine3.15
 ENV NUXT_HOST=0.0.0.0 NUXT_PORT=3000
 RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
