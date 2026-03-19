@@ -1,4 +1,4 @@
-FROM node:17-alpine3.15 as build
+FROM node:19-alpine3.15 as build
 WORKDIR /app
 RUN apk add --no-cache curl git && cd /tmp && \
     curl -#L https://github.com/tj/node-prune/releases/download/v1.0.1/node-prune_1.0.1_linux_amd64.tar.gz | tar -xvzf- && \
@@ -11,7 +11,7 @@ RUN yarn build
 ENV NODE_ENV=production
 RUN yarn --frozen-lockfile --non-interactive --production && node-clean
 
-FROM node:17-alpine3.15
+FROM node:19-alpine3.15
 WORKDIR /app
 RUN apk --no-cache add curl
 ENV NODE_ENV=production NUXT_HOST=0.0.0.0
