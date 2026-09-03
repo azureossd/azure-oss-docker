@@ -4056,35 +4056,10 @@ eslint-config-prettier@^10.1.8:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-10.1.8.tgz#15734ce4af8c2778cc32f0b01b37b0b5cd1ecb97"
   integrity sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==
 
-eslint-scope@5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
-  integrity sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==
-  dependencies:
-    esrecurse "^4.3.0"
-    estraverse "^4.1.1"
-
 esprima@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
   integrity sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
-
-esrecurse@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/esrecurse/-/esrecurse-4.3.0.tgz#7ad7964d679abb28bee72cec63758b1c5d2c9921"
-  integrity sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==
-  dependencies:
-    estraverse "^5.2.0"
-
-estraverse@^4.1.1:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.3.0.tgz#398ad3f3c5a24948be7725e83d11a7de28cdbd1d"
-  integrity sha512-39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==
-
-estraverse@^5.2.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-5.3.0.tgz#2eea5290702f26ab8fe5370370ff86c965d21123"
-  integrity sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==
 
 estree-walker@2.0.2, estree-walker@^2.0.2:
   version "2.0.2"
@@ -5798,15 +5773,15 @@ minimatch@^9.0.1, minimatch@^9.0.4:
   dependencies:
     brace-expansion "^2.0.2"
 
-minimizer-webpack-plugin@^5.6.1:
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/minimizer-webpack-plugin/-/minimizer-webpack-plugin-5.6.1.tgz#289922a4c96c4ed1ddb76b8a00bd8074e89a2f7f"
-  integrity sha512-DoeAZz8Q1C1znwsUzej1fdoi4jCf7/+Em27ouLqfK/+3m8G+D7yDhUwrc3CNhjSzGUN1kn7Iv4sWmjflQHenpw==
+minimizer-webpack-plugin@^5.7.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/minimizer-webpack-plugin/-/minimizer-webpack-plugin-5.8.0.tgz#744f0e28da888aa1708e2be32b4ddcf2eeb09e58"
+  integrity sha512-2cT9+goJfBhtMz+gJqejSf09ClgmYhPhccRb/fb0ztVbixt0BkO8mRuI26FoPPuUNkRk6iEDryWAIouc5W8eJA==
   dependencies:
-    "@jridgewell/trace-mapping" "^0.3.25"
+    "@jridgewell/trace-mapping" "^0.3.31"
     jest-worker "^27.4.5"
-    schema-utils "^4.3.0"
-    terser "^5.31.1"
+    schema-utils "^4.3.3"
+    terser "^5.51.0"
 
 "minipass@^5.0.0 || ^6.0.2 || ^7.0.0", minipass@^7.0.4, minipass@^7.1.2, minipass@^7.1.3:
   version "7.1.3"
@@ -7023,7 +6998,7 @@ sax@^1.5.0:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.6.0.tgz#da59637629307b97e7c4cb28e080a7bc38560d5b"
   integrity sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==
 
-schema-utils@^4.3.0, schema-utils@^4.3.3:
+schema-utils@^4.3.3:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-4.3.3.tgz#5b1850912fa31df90716963d45d9121fdfc09f46"
   integrity sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==
@@ -7545,10 +7520,20 @@ teex@^1.0.1:
   dependencies:
     streamx "^2.12.5"
 
-terser@^5.17.4, terser@^5.31.1:
+terser@^5.17.4:
   version "5.46.1"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.46.1.tgz#40e4b1e35d5f13130f82793a8b3eeb7ec3a92eee"
   integrity sha512-vzCjQO/rgUuK9sf8VJZvjqiqiHFaZLnOiimmUuOKODxWL8mm/xua7viT7aqX7dgPY60otQjUotzFMmCB4VdmqQ==
+  dependencies:
+    "@jridgewell/source-map" "^0.3.3"
+    acorn "^8.15.0"
+    commander "^2.20.0"
+    source-map-support "~0.5.20"
+
+terser@^5.51.0:
+  version "5.51.2"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-5.51.2.tgz#555912425a7f2ff7737425c3718fa76c7069f6ef"
+  integrity sha512-bWnjSNscmuI+GJze6ZupnHP8G/cTcsJF+bXCeQknk2SHQsgbNJnLrqiH9jZ2W4STPVXH2mDKKRX3iwPhc9Cn/Q==
   dependencies:
     "@jridgewell/source-map" "^0.3.3"
     acorn "^8.15.0"
@@ -8132,10 +8117,10 @@ webpack-virtual-modules@^0.6.2:
   resolved "https://registry.yarnpkg.com/webpack-virtual-modules/-/webpack-virtual-modules-0.6.2.tgz#057faa9065c8acf48f24cb57ac0e77739ab9a7e8"
   integrity sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==
 
-webpack@^5.109.2:
-  version "5.109.2"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.109.2.tgz#b58dc289561c3282db35c210a99379a836a4c28d"
-  integrity sha512-U9/cvLzxObKNEZ9+TtdqrHM5/9z3lgl2c+c4BzbqGxFQvQvBAq87yql5A8pQ+rrMbS496MZJeF5enVBndIy2hw==
+webpack@^5.110.2:
+  version "5.110.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.110.2.tgz#ef23a0e62fe5e1ba71b033e3505b7f005d8d5c6e"
+  integrity sha512-TciLrfM7zgEjqGdY851HkirDsSPQgTFsWQpl9oHqMAMYsHhEC0bKjscvjpnz+pzx10hLC8qISApGrsnrCP4UtQ==
   dependencies:
     "@types/estree" "^1.0.8"
     "@types/json-schema" "^7.0.15"
@@ -8147,11 +8132,10 @@ webpack@^5.109.2:
     chrome-trace-event "^1.0.2"
     enhanced-resolve "^5.24.4"
     es-module-lexer "^2.1.0"
-    eslint-scope "5.1.1"
     events "^3.2.0"
     graceful-fs "^4.2.11"
     mime-db "^1.54.0"
-    minimizer-webpack-plugin "^5.6.1"
+    minimizer-webpack-plugin "^5.7.0"
     neo-async "^2.6.2"
     schema-utils "^4.3.3"
     tapable "^2.3.0"
