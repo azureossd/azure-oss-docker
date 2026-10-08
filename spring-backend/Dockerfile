@@ -4,7 +4,7 @@ RUN mvn dependency:go-offline -B
 COPY ./src ./src
 RUN mvn package
 
-FROM eclipse-temurin:26-alpine
+FROM eclipse-temurin:27-alpine
 RUN apk --no-cache add curl
 WORKDIR /app
 COPY --from=build target/*.jar spring-backend.jar
